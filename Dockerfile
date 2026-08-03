@@ -5,7 +5,7 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # 3. Install necessary system graphics libraries for OpenCV
-RUN apt-get update && apt-get install -y libgl1-mesa-glx libglib2.0-0
+RUN apt-get update && apt-get install -y libgl1 libglib2.0-0
 
 # 4. Copy the requirements file into the container
 COPY requirements.txt .
